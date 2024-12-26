@@ -9,6 +9,9 @@
     "build": "tsc -p .",
     "start": "nodemon dist/src/Server.js"
   },
+  "engines": {
+    "node": "20.15.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
