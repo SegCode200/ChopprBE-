@@ -5,7 +5,7 @@ import mongoose, { Model, Schema } from "mongoose"
 interface Iuser {
     name: string;
     email: string;
-    url?: string
+    url?: [{}]
 }
 
 const UserSchema: Schema<Iuser> = new mongoose.Schema({

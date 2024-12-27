@@ -2,6 +2,7 @@ import express, { Request, Response } from "express"
 import crypto from "crypto"
 import { UserModel } from "../Model/UserModel";
 import { ShortUrlModel } from "../Model/ShortUrl";
+import mongoose from "mongoose";
 
 
 const port: number = parseInt(process.env.PORT!) || 2310
@@ -39,6 +40,8 @@ export const shorturl = async (req: Request, res: Response): Promise<any> => {
                 shortkey: shortKey,
                 createdBy: user._id
             })
+            user.url?.push(new mongoose.Types.ObjectId(inputedUserUrl._id))
+            user.save()
 
             return res.status(200).json({
                 message: "Url Generated succesfully", status: "true", data: {
