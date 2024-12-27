@@ -21,7 +21,7 @@ app.listen(port, () => {
     console.clear();
     console.log();
     console.clear()
-    console.log(`Server running at http://localhost:${port} 😈😈👽`)
+    console.log(`Server running at https://chopprbe.onrender.com 😈😈👽`)
     Dbconfig()
 
 })

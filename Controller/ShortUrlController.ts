@@ -18,7 +18,7 @@ export const shorturl = async (req: Request, res: Response): Promise<any> => {
 
         // Generate a unique key
         const shortKey = generateShortKey();
-        const shortUrl = `http://localhost:${port}/${shortKey}`;
+        const shortUrl = `https://chopprbe.onrender.com/${shortKey}`;
         if (!userId) {
             const inputedUserUrl = await ShortUrlModel.create({
                 longURL: longUrl,

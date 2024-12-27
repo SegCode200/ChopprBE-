@@ -59,7 +59,7 @@ var shorturl = function (req, res) { return __awaiter(void 0, void 0, void 0, fu
                     return [2 /*return*/, res.status(400).json({ error: 'Please provide a valid URL.' })];
                 }
                 shortKey = generateShortKey();
-                shortUrl = "http://localhost:".concat(port, "/").concat(shortKey);
+                shortUrl = "https://chopprbe.onrender.com/".concat(shortKey);
                 if (!!userId) return [3 /*break*/, 2];
                 return [4 /*yield*/, ShortUrl_1.ShortUrlModel.create({
                         longURL: longUrl,

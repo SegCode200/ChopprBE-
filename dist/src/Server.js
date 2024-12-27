@@ -19,6 +19,6 @@ app.listen(port, function () {
     console.clear();
     console.log();
     console.clear();
-    console.log("Server running at http://localhost:".concat(port, " \uD83D\uDE08\uD83D\uDE08\uD83D\uDC7D"));
+    console.log("Server running at https://chopprbe.onrender.com \uD83D\uDE08\uD83D\uDE08\uD83D\uDC7D");
     (0, DB_1.Dbconfig)();
 });
