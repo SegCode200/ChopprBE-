@@ -17,12 +17,12 @@ export const UserLogin = async (req: Request, res: Response): Promise<any> => {
 }
 export const UserRegister = async (req: Request, res: Response): Promise<any> => {
     try {
-        const { name, email } = req.body
+        const { name, email, walletAddress } = req.body
         const user = await UserModel.findOne({ email })
         if (user) {
             return res.status(401).json({ message: "Email already exists", status: "false" })
         }
-        const createduser = await UserModel.create({ name, email })
+        const createduser = await UserModel.create({ name, email, walletAddress: walletAddress })
 
         return res.status(201).json({ status: true, message: "User registered successfully", data: createduser })
     } catch (error) {

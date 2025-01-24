@@ -5,13 +5,17 @@ import mongoose, { Model, Schema } from "mongoose"
 interface Iuser {
     name: string;
     email: string;
-    url?: [{}]
+    url?: [{}];
+    walletAddress: string;
 }
 
 const UserSchema: Schema<Iuser> = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
-    url: [{ type: Schema.Types.ObjectId, ref: "ShortURL" }]
+    url: [{ type: Schema.Types.ObjectId, ref: "ShortURL" }],
+    walletAddress: {
+        type: String, required: true, unique: true
+    }
 }, { timestamps: true })
 
 // Model
